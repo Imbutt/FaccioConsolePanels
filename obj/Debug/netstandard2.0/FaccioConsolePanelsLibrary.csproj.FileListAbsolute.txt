@@ -1,0 +1,17 @@
+D:\Users\Andrea\Desktop\progamazore\repos\FaccioConsolePanelsLibrary\FaccioConsolePanelsLibrary\bin\Debug\netstandard2.0\FaccioConsolePanelsLibrary.deps.json
+D:\Users\Andrea\Desktop\progamazore\repos\FaccioConsolePanelsLibrary\FaccioConsolePanelsLibrary\bin\Debug\netstandard2.0\FaccioConsolePanelsLibrary.dll
+D:\Users\Andrea\Desktop\progamazore\repos\FaccioConsolePanelsLibrary\FaccioConsolePanelsLibrary\bin\Debug\netstandard2.0\FaccioConsolePanelsLibrary.pdb
+D:\Users\Andrea\Desktop\progamazore\repos\FaccioConsolePanelsLibrary\FaccioConsolePanelsLibrary\obj\Debug\netstandard2.0\FaccioConsolePanelsLibrary.csprojAssemblyReference.cache
+D:\Users\Andrea\Desktop\progamazore\repos\FaccioConsolePanelsLibrary\FaccioConsolePanelsLibrary\obj\Debug\netstandard2.0\FaccioConsolePanelsLibrary.AssemblyInfoInputs.cache
+D:\Users\Andrea\Desktop\progamazore\repos\FaccioConsolePanelsLibrary\FaccioConsolePanelsLibrary\obj\Debug\netstandard2.0\FaccioConsolePanelsLibrary.AssemblyInfo.cs
+D:\Users\Andrea\Desktop\progamazore\repos\FaccioConsolePanelsLibrary\FaccioConsolePanelsLibrary\obj\Debug\netstandard2.0\FaccioConsolePanelsLibrary.csproj.CoreCompileInputs.cache
+D:\Users\Andrea\Desktop\progamazore\repos\FaccioConsolePanelsLibrary\FaccioConsolePanelsLibrary\obj\Debug\netstandard2.0\FaccioConsolePanelsLibrary.dll
+D:\Users\Andrea\Desktop\progamazore\repos\FaccioConsolePanelsLibrary\FaccioConsolePanelsLibrary\obj\Debug\netstandard2.0\FaccioConsolePanelsLibrary.pdb
+U:\FaccioConsolePanelsLibrary\FaccioConsolePanelsLibrary\bin\Debug\netstandard2.0\FaccioConsolePanelsLibrary.deps.json
+U:\FaccioConsolePanelsLibrary\FaccioConsolePanelsLibrary\bin\Debug\netstandard2.0\FaccioConsolePanelsLibrary.dll
+U:\FaccioConsolePanelsLibrary\FaccioConsolePanelsLibrary\bin\Debug\netstandard2.0\FaccioConsolePanelsLibrary.pdb
+U:\FaccioConsolePanelsLibrary\FaccioConsolePanelsLibrary\obj\Debug\netstandard2.0\FaccioConsolePanelsLibrary.csprojAssemblyReference.cache
+U:\FaccioConsolePanelsLibrary\FaccioConsolePanelsLibrary\obj\Debug\netstandard2.0\FaccioConsolePanelsLibrary.AssemblyInfoInputs.cache
+U:\FaccioConsolePanelsLibrary\FaccioConsolePanelsLibrary\obj\Debug\netstandard2.0\FaccioConsolePanelsLibrary.AssemblyInfo.cs
+U:\FaccioConsolePanelsLibrary\FaccioConsolePanelsLibrary\obj\Debug\netstandard2.0\FaccioConsolePanelsLibrary.dll
+U:\FaccioConsolePanelsLibrary\FaccioConsolePanelsLibrary\obj\Debug\netstandard2.0\FaccioConsolePanelsLibrary.pdb
