@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "j2PuBl7VIwoYkqjMfSpsFEkxOMG0+Q5EKCEjNe+3sF3sglyHlCewAtsuflsm1VNL8HpTUrjNSJESqrPA4F+3PA==",
+  "dgSpecHash": "rD8lBrdWdme8+VDlnToMks6YVS6yjoQXG4RsOMvmydrdLryIhRVEcoOsB+5W6jgDmG/yNiEzF/ElQcApJcu+mQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Utente\\source\\repos\\Snake\\FaccioConsolePanels\\FaccioConsolePanelsLibrary.csproj",
+  "projectFilePath": "C:\\Users\\Utente\\source\\repos\\SIO9UIISUISIUSIUS\\FaccioConsolePanels\\FaccioConsolePanelsLibrary.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Utente\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\Utente\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",

@@ -1978,11 +1978,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Utente\\source\\repos\\Snake\\FaccioConsolePanels\\FaccioConsolePanelsLibrary.csproj",
+      "projectUniqueName": "C:\\Users\\Utente\\source\\repos\\SIO9UIISUISIUSIUS\\FaccioConsolePanels\\FaccioConsolePanelsLibrary.csproj",
       "projectName": "FaccioConsolePanelsLibrary",
-      "projectPath": "C:\\Users\\Utente\\source\\repos\\Snake\\FaccioConsolePanels\\FaccioConsolePanelsLibrary.csproj",
+      "projectPath": "C:\\Users\\Utente\\source\\repos\\SIO9UIISUISIUSIUS\\FaccioConsolePanels\\FaccioConsolePanelsLibrary.csproj",
       "packagesPath": "C:\\Users\\Utente\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Utente\\source\\repos\\Snake\\FaccioConsolePanels\\obj\\",
+      "outputPath": "C:\\Users\\Utente\\source\\repos\\SIO9UIISUISIUSIUS\\FaccioConsolePanels\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\"
