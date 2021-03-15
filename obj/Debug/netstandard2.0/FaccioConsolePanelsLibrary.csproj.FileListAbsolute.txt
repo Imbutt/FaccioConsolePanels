@@ -15,3 +15,12 @@ U:\FaccioConsolePanelsLibrary\FaccioConsolePanelsLibrary\obj\Debug\netstandard2.
 U:\FaccioConsolePanelsLibrary\FaccioConsolePanelsLibrary\obj\Debug\netstandard2.0\FaccioConsolePanelsLibrary.AssemblyInfo.cs
 U:\FaccioConsolePanelsLibrary\FaccioConsolePanelsLibrary\obj\Debug\netstandard2.0\FaccioConsolePanelsLibrary.dll
 U:\FaccioConsolePanelsLibrary\FaccioConsolePanelsLibrary\obj\Debug\netstandard2.0\FaccioConsolePanelsLibrary.pdb
+C:\Users\Utente\source\repos\Snake\FaccioConsolePanels\bin\Debug\netstandard2.0\FaccioConsolePanelsLibrary.deps.json
+C:\Users\Utente\source\repos\Snake\FaccioConsolePanels\bin\Debug\netstandard2.0\FaccioConsolePanelsLibrary.dll
+C:\Users\Utente\source\repos\Snake\FaccioConsolePanels\bin\Debug\netstandard2.0\FaccioConsolePanelsLibrary.pdb
+C:\Users\Utente\source\repos\Snake\FaccioConsolePanels\obj\Debug\netstandard2.0\FaccioConsolePanelsLibrary.csprojAssemblyReference.cache
+C:\Users\Utente\source\repos\Snake\FaccioConsolePanels\obj\Debug\netstandard2.0\FaccioConsolePanelsLibrary.AssemblyInfoInputs.cache
+C:\Users\Utente\source\repos\Snake\FaccioConsolePanels\obj\Debug\netstandard2.0\FaccioConsolePanelsLibrary.AssemblyInfo.cs
+C:\Users\Utente\source\repos\Snake\FaccioConsolePanels\obj\Debug\netstandard2.0\FaccioConsolePanelsLibrary.csproj.CoreCompileInputs.cache
+C:\Users\Utente\source\repos\Snake\FaccioConsolePanels\obj\Debug\netstandard2.0\FaccioConsolePanelsLibrary.dll
+C:\Users\Utente\source\repos\Snake\FaccioConsolePanels\obj\Debug\netstandard2.0\FaccioConsolePanelsLibrary.pdb

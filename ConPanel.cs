@@ -141,7 +141,7 @@ namespace FaccioConsolePanelsLibrary
 
                 _stringPos += HorSpaceLeft; // Advance in the _string
 
-                if (_stringPos < _string.Length) // If string to write is not over
+                if (_stringPos < _string.Length && HorSpaceLeft > 0) // If string to write is not over
                 {
                     // Auto new line
                     if (this.CursorX + 1 >= this.PanWidth && this.WriteAutoNewLine)
