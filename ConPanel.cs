@@ -141,14 +141,26 @@ namespace FaccioConsolePanelsLibrary
 
                 _stringPos += HorSpaceLeft; // Advance in the _string
 
-                if (_stringPos < _string.Length && HorSpaceLeft > 0) // If string to write is not over
+                
+                if (_stringPos < _string.Length ) // If string to write is not over
                 {
-                    // Auto new line
-                    if (this.CursorX + 1 >= this.PanWidth && this.WriteAutoNewLine)
-                        this.WriteLine();
+                    // TODO: what
+                    if(HorSpaceLeft < 0 )
+                    {
+
+                    }
+                    else
+                    {
+                        // Auto new line
+                        if (this.WriteAutoNewLine)
+                            this.WriteLine();
+                        else
+                            loop = false;
+                    }
                 }
                 else
                     loop = false;       // String is over, end loop   
+                
             }
         }
 
@@ -232,14 +244,24 @@ namespace FaccioConsolePanelsLibrary
             this.UpdateCursorPosition();
         }
 
+        public void WriteFast(string _string)
+        {
+            this.GoToCursorPosition();
+            Console.Write(_string);
+            this.UpdateCursorPosition();
+        }
+
         #endregion
 
         public void Clear()
         {
+            this.SetCursorPosition(0, 0);
             for (int i = 0; i < this.PanHeight; i++)
             {
-                this.WriteLine(new string(' ', this.PanWidth));
+                this.WriteFast(new string(' ', this.PanWidth));
+                this.WriteLine();
             }
+            this.SetCursorPosition(0, 0);
         }
 
         /// <summary>
