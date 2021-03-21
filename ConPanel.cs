@@ -20,19 +20,21 @@ namespace FaccioConsolePanelsLibrary
         public int CursorY { get; private set; }
 
         public bool WriteAutoNewLine { get; set; }  // Go to next line when run out of space in line
-        public bool WriteAutoRebeginLines { get; set; } // Go to the top when run out of lines 
+        public bool WriteAutoRebeginLines { get; set; } // Go to the top when run out of lines
+
+        //public string MyProperty { get; set; }
 
         /// <summary>
         /// 
         /// </summary>
-        /// <param name="panWidth"> Width of the panel </param>
-        /// <param name="panHeight"> Heigh of the panel </param>
         /// <param name="panX"> Position of the Panel </param>
         /// <param name="panY"> Position of the Panel </param>
+        /// <param name="panWidth"> Width of the panel </param>
+        /// <param name="panHeight"> Heigh of the panel </param>
         /// <param name="box"> Draw the outside box </param>
         /// <param name="writeAutoNewLine"> Go to next line when run out of space in line </param>
         /// <param name="writeAutoRebeginLines"> Go to the top when run out of lines </param>
-        public ConPanel(int panWidth, int panHeight, int panX, int panY,bool box, bool writeAutoNewLine, 
+        public ConPanel(int panX, int panY, int panWidth, int panHeight,bool box, bool writeAutoNewLine, 
             bool writeAutoRebeginLines)
         {
             // Asssing properties
@@ -47,39 +49,48 @@ namespace FaccioConsolePanelsLibrary
                 PrintBox();
         }
 
+        public string GetBoxTiles()
+        {
+            string tiles = "╔╗╚╝═║";
+            return tiles;
+        }
+
         public void PrintBox()
         {
             // TODO: Make it in a variable? Deletable? Customizable?
+
+            string t = GetBoxTiles();
+
             int boxXMin = this.PanX - 1;
             int boxXMax = this.PanX + this.PanWidth;
             int boxYMin = this.PanY - 1;
             int boxYMax = this.PanY + this.PanHeight;
 
             Console.SetCursorPosition(boxXMin, boxYMin);
-            Console.WriteLine("╔");
+            Console.WriteLine(t[0]);      // ╔
             Console.SetCursorPosition(boxXMax, boxYMin);
-            Console.WriteLine("╗");
+            Console.WriteLine(t[1]);      // ╗
             Console.SetCursorPosition(boxXMin, boxYMax);
-            Console.WriteLine("╚");
+            Console.WriteLine(t[2]);      // ╚
             Console.SetCursorPosition(boxXMax, boxYMax);
-            Console.WriteLine("╝");
+            Console.WriteLine(t[3]);        // ╝
 
             // Stampo linee del boxo superiore e inferiore
             for (int i = 0; i < this.PanWidth; i++)
             {
                 Console.SetCursorPosition(i + this.PanX, boxYMin);
-                Console.Write("═");
+                Console.Write(t[4]);    // ═
                 Console.SetCursorPosition(i + this.PanX, boxYMin + this.PanHeight + 1);
-                Console.Write("═");
+                Console.Write(t[4]);    // ═
             }
 
             // Stampo linee del boxo destro e sinistro
             for (int i = 0; i < this.PanHeight; i++)
             {
                 Console.SetCursorPosition(boxXMin, i + this.PanY);
-                Console.Write("║");
+                Console.Write(t[5]);    // ║
                 Console.SetCursorPosition(boxXMin + this.PanWidth + 1, i + this.PanY );
-                Console.Write("║");
+                Console.Write(t[5]);     // ║
             }
 
         }
@@ -283,18 +294,15 @@ namespace FaccioConsolePanelsLibrary
             return _string;
         }
 
-        /// <summary>
-        /// Equivalent of Console.ReadKey with the panel in mind
-        /// </summary>
-        /// <param name="hideKey"> Hide the </param>
-        public ConsoleKeyInfo ReadKey(bool hideKey)
+        public ConsoleKeyInfo ReadKey(bool noWrite)
         {
-            this.SetCursorPosition(CursorX, CursorY);
-            ConsoleKeyInfo key = Console.ReadKey(hideKey);
+            this.GoToCursorPosition();
+            ConsoleKeyInfo keyInfo = Console.ReadKey(noWrite);
             this.UpdateCursorPosition();
 
-            return key;
+            return keyInfo;
         }
+
 
         /// <summary>
         /// Sposta il cursore dalla posizione corrente
