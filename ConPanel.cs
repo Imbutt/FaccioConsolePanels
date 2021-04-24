@@ -62,10 +62,29 @@ namespace FaccioConsolePanelsLibrary
             string t = GetBoxTiles();
 
             int boxXMin = this.PanX - 1;
-            int boxXMax = this.PanX + this.PanWidth;
+            int boxXMax = this.PanX + this.PanWidth - 1;
             int boxYMin = this.PanY - 1;
             int boxYMax = this.PanY + this.PanHeight;
 
+            // Print Horizontal Lines
+            for (int i = 0; i < this.PanWidth; i++)
+            {
+                Console.SetCursorPosition(i + this.PanX, boxYMin);
+                Console.Write(t[4]);    // ═
+                Console.SetCursorPosition(i + this.PanX, boxYMax);
+                Console.Write(t[4]);    // ═
+            }
+
+            // Print Vertical Lines
+            for (int i = 0; i < this.PanHeight; i++)
+            {
+                Console.SetCursorPosition(boxXMin, i + this.PanY);
+                Console.Write(t[5]);    // ║
+                Console.SetCursorPosition(boxXMax, i + this.PanY );
+                Console.Write(t[5]);     // ║
+            }
+
+            // Print Edges
             Console.SetCursorPosition(boxXMin, boxYMin);
             Console.WriteLine(t[0]);      // ╔
             Console.SetCursorPosition(boxXMax, boxYMin);
@@ -74,24 +93,6 @@ namespace FaccioConsolePanelsLibrary
             Console.WriteLine(t[2]);      // ╚
             Console.SetCursorPosition(boxXMax, boxYMax);
             Console.WriteLine(t[3]);        // ╝
-
-            // Stampo linee del boxo superiore e inferiore
-            for (int i = 0; i < this.PanWidth; i++)
-            {
-                Console.SetCursorPosition(i + this.PanX, boxYMin);
-                Console.Write(t[4]);    // ═
-                Console.SetCursorPosition(i + this.PanX, boxYMin + this.PanHeight + 1);
-                Console.Write(t[4]);    // ═
-            }
-
-            // Stampo linee del boxo destro e sinistro
-            for (int i = 0; i < this.PanHeight; i++)
-            {
-                Console.SetCursorPosition(boxXMin, i + this.PanY);
-                Console.Write(t[5]);    // ║
-                Console.SetCursorPosition(boxXMin + this.PanWidth + 1, i + this.PanY );
-                Console.Write(t[5]);     // ║
-            }
 
         }
 
