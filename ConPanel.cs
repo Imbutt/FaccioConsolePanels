@@ -39,7 +39,7 @@ namespace FaccioConsolePanelsLibrary
         {
             // Check position
             if (panX <= 0 || panY <= 0)
-                throw new Exception($"ConPanel outside of legal range");
+                throw new Exception($"ConPanel position outside of legal range");
 
             // Asssing properties
             PanWidth = panWidth;
@@ -64,7 +64,6 @@ namespace FaccioConsolePanelsLibrary
         public void PrintBox()
         {
             // TODO: Make it in a variable? Deletable? Customizable?
-
             string t = GetBoxTiles();
 
             int boxXMin = this.PanX - 1;
@@ -91,7 +90,6 @@ namespace FaccioConsolePanelsLibrary
             this.WriteCharDirect(boxXMax, boxYMin, t[1]);   // ╗   
             this.WriteCharDirect(boxXMin, boxYMax, t[2]);   // ╚
             this.WriteCharDirect(boxXMax, boxYMax, t[3]);   // ╝     
-
         }
 
         private void WriteCharDirect(int x, int y, char _char)
@@ -103,8 +101,6 @@ namespace FaccioConsolePanelsLibrary
             }
 
         }
-        
-
 
         /// <summary>
         /// Update the Cursor position properties to x and y
@@ -160,7 +156,6 @@ namespace FaccioConsolePanelsLibrary
                 this.UpdateCursorPosition();
 
                 _stringPos += HorSpaceLeft; // Advance in the _string
-
                 
                 if (_stringPos < _string.Length ) // If string to write is not over
                 {
@@ -295,8 +290,12 @@ namespace FaccioConsolePanelsLibrary
 
             do
             {
-                this.SetCursorPosition(CursorX, CursorY);
-                _string = Console.ReadLine();
+                do
+                {
+                    this.SetCursorPosition(CursorX, CursorY);
+                    char _char = (char)Console.Read();
+                } while (true);
+
 
             } while (string.IsNullOrWhiteSpace(_string));
 
