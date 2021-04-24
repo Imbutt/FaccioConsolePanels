@@ -37,6 +37,10 @@ namespace FaccioConsolePanelsLibrary
         public ConPanel(int panX, int panY, int panWidth, int panHeight,bool box, bool writeAutoNewLine, 
             bool writeAutoRebeginLines)
         {
+            // Check position
+            if (panX <= 0 || panY <= 0)
+                throw new Exception($"ConPanel outside of legal range");
+
             // Asssing properties
             PanWidth = panWidth;
             PanHeight = panHeight;
@@ -44,6 +48,8 @@ namespace FaccioConsolePanelsLibrary
             PanY = panY;
             WriteAutoNewLine = writeAutoNewLine;
             WriteAutoRebeginLines = writeAutoRebeginLines;
+
+
 
             if (box)
                 PrintBox();
@@ -69,33 +75,35 @@ namespace FaccioConsolePanelsLibrary
             // Print Horizontal Lines
             for (int i = 0; i < this.PanWidth; i++)
             {
-                Console.SetCursorPosition(i + this.PanX, boxYMin);
-                Console.Write(t[4]);    // ═
-                Console.SetCursorPosition(i + this.PanX, boxYMax);
-                Console.Write(t[4]);    // ═
+                this.WriteCharDirect(i + this.PanX, boxYMin, t[4]); // ═
+                this.WriteCharDirect(i + this.PanX, boxYMax, t[4]); // ═
             }
 
             // Print Vertical Lines
             for (int i = 0; i < this.PanHeight; i++)
             {
-                Console.SetCursorPosition(boxXMin, i + this.PanY);
-                Console.Write(t[5]);    // ║
-                Console.SetCursorPosition(boxXMax, i + this.PanY );
-                Console.Write(t[5]);     // ║
+                this.WriteCharDirect(boxXMin, i + this.PanY, t[5]); // ║  
+                this.WriteCharDirect(boxXMax, i + this.PanY, t[5]); // ║
             }
 
             // Print Edges
-            Console.SetCursorPosition(boxXMin, boxYMin);
-            Console.WriteLine(t[0]);      // ╔
-            Console.SetCursorPosition(boxXMax, boxYMin);
-            Console.WriteLine(t[1]);      // ╗
-            Console.SetCursorPosition(boxXMin, boxYMax);
-            Console.WriteLine(t[2]);      // ╚
-            Console.SetCursorPosition(boxXMax, boxYMax);
-            Console.WriteLine(t[3]);        // ╝
+            this.WriteCharDirect(boxXMin, boxYMin, t[0]);   // ╔    
+            this.WriteCharDirect(boxXMax, boxYMin, t[1]);   // ╗   
+            this.WriteCharDirect(boxXMin, boxYMax, t[2]);   // ╚
+            this.WriteCharDirect(boxXMax, boxYMax, t[3]);   // ╝     
 
         }
 
+        private void WriteCharDirect(int x, int y, char _char)
+        {
+            if((x >= 0 && x < Console.BufferWidth) && (y >= 0 && y < Console.BufferHeight))
+            {
+                Console.SetCursorPosition(x, y);
+                Console.Write(_char);
+            }
+
+        }
+        
 
 
         /// <summary>
