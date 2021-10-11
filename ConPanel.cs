@@ -67,7 +67,7 @@ namespace FaccioConsolePanelsLibrary
             string t = GetBoxTiles();
 
             int boxXMin = this.PanX - 1;
-            int boxXMax = this.PanX + this.PanWidth - 1;
+            int boxXMax = this.PanX + this.PanWidth;
             int boxYMin = this.PanY - 1;
             int boxYMax = this.PanY + this.PanHeight;
 
@@ -279,6 +279,7 @@ namespace FaccioConsolePanelsLibrary
             this.SetCursorPosition(0, 0);
         }
 
+        /*
         /// <summary>
         ///  Equivalent of Console.ReadLine but with outside console in mind
         /// </summary>
@@ -290,17 +291,20 @@ namespace FaccioConsolePanelsLibrary
 
             do
             {
+                char _char;
                 do
                 {
                     this.SetCursorPosition(CursorX, CursorY);
-                    char _char = (char)Console.Read();
-                } while (true);
+                    _char = (char)Console.Read();
+                } while (_char != '\n');
 
 
             } while (string.IsNullOrWhiteSpace(_string));
 
             return _string;
         }
+        */
+        
 
         public ConsoleKeyInfo ReadKey(bool noWrite)
         {
@@ -326,7 +330,7 @@ namespace FaccioConsolePanelsLibrary
         {
             _string = _string.Remove(_string.Length - 1);
             this.MoveCursorPosition(-1, 0);
-            Console.Write(deleteChar);
+            this.WriteFast(deleteChar);
             this.MoveCursorPosition(-1, 0);
 
             return _string;
@@ -350,7 +354,7 @@ namespace FaccioConsolePanelsLibrary
                 keyInfo = this.ReadKey(true);
                 if (keyInfo.Key == ConsoleKey.Backspace)
                 {
-                    if (!String.IsNullOrEmpty(output))
+                    if (output.Length > 0)
                     {
                         output = this.DeleteChar(output, deleteChar);
                     }
@@ -361,7 +365,7 @@ namespace FaccioConsolePanelsLibrary
                     {
                         char _char = keyInfo.KeyChar;
 
-                        if (pattern.Contains(_char.ToString()))
+                        if (pattern == null || pattern.Contains(_char.ToString()))
                         {
 
                             if (keyInfo.KeyChar != '\'')
@@ -402,8 +406,9 @@ namespace FaccioConsolePanelsLibrary
                 }
 
             } while (keyInfo.Key != ConsoleKey.Enter || output.Length < min);
+            this.WriteLine();
 
-            return output;
+            return output.Remove(output.Length - 1);    //Remove last return
         }
 
 
